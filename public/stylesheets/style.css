@@ -1,0 +1,14 @@
+body {
+  /* padding: 50px; */
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: linear-gradient(to right,rgb(11, 171, 152), rgb(240, 238, 234),rgb(240, 238, 234),rgb(199, 72, 37));
+}
+
+a {
+  color: #00B7FF;
+}
+
+.CRUD{
+  font-size: 50px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

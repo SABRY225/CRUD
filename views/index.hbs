@@ -1,0 +1,102 @@
+<div class="container-fliud text-center">
+    <div class="CRUD text-info bg-dark">CRUD</div>
+</div>
+<div class="container-fluid">
+    <div class="row m-5 ">
+        <div class=" col m-2 ">
+            <div class=" card border-dark mb-5 ">
+                <div class="card-header">Hello User</div>
+                <div class="card-body">
+                    <form action="/insert" method="post">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">User Name</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" name="username">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">User Email </label>
+                            <input type="email" class="form-control" id="exampleInputPassword1"  name="useremail">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary ">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row m-5">
+        <div class="col-xs-12  col-md-6 col-lg-4">
+            <div class=" card border-success mb-5 bg-light">
+                <div class="card-header border-success">Get All User</div>
+                <div class="card-body">
+                    <form action="/getusers" method="get">
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary " >Get User</button>
+                        </div>
+                        {{#each items }}
+                        <div class="container card m-2 p-2 bg-success ">
+                        <div >
+                            <b class="text-light ">Id : </b>  {{this._id}}
+                        </div>
+                        <div>
+                            <b class="text-light ">UserName : </b> {{this.userName}}
+                        </div>
+                        <div>
+                            <b class="text-light ">UserEmail : </b> {{this.userEmail}}
+                        </div>
+                        </div>
+                        {{/each}}
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12  col-md-6 col-lg-4  ">
+            <div class=" card border-light mb-5 bg-dark text-light " >
+                <div class="card-header border-light">Update User</div>
+                <div class="card-body">
+                    <form action="/updateuser" method="post">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Enter ID User</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" name="id">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">User Name</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" name="username">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">User Email </label>
+                            <input type="email" class="form-control" id="exampleInputPassword1"  name="useremail">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary ">Update User</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12  col-md-6 col-lg-4 ">
+            <div class=" card border-light mb-5 bg-danger text-light" >
+                <div class="card-header border-light">Update User</div>
+                <div class="card-body">
+                    <form action="/removeuser" method="post">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Enter ID User</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" name="id">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary ">Remove User</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+</div> 
+
